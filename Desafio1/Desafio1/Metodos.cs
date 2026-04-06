@@ -11,7 +11,8 @@ public class Metodos
         Console.WriteLine("Qual o nome você deseja colocar no arquivo?");
         string nome = Console.ReadLine();
 
-        if (string.IsNullOrEmpty(nome))
+
+        if (string.IsNullOrEmpty(nome)) //Verificando se o nome é nullo/vazio
         {
             Console.WriteLine("O sobrenome que você deu é invalido ou nullo!");
             Thread.Sleep(900);
@@ -21,9 +22,9 @@ public class Metodos
         else
         {
 
-            string nomeF = char.ToUpper(nome[0]) + nome.Substring(1).ToLower();
+            string nomeF = char.ToUpper(nome[0]) + nome.Substring(1).ToLower(); //Transformando a primeira letra em maiuscula
 
-            string caminhoArquivo = $@"E:\Desenvolvimento\Desafio1\nome.txt";
+            string caminhoArquivo = $@"C:\DasafiosJanio\Desafio1\nome.txt"; //Alterar o output do arquivo
             File.AppendAllText(caminhoArquivo, $"{nomeF}" + Environment.NewLine);
         }
     }
@@ -32,7 +33,8 @@ public class Metodos
     {
         Console.WriteLine("Qual o sobrenome você deseja colocar no arquivo?");
         string sobrenome = Console.ReadLine();
-        if (string.IsNullOrEmpty(sobrenome))
+
+        if (string.IsNullOrEmpty(sobrenome)) //Verificando se o nome é nullo/vazio
         {
             Console.WriteLine("O sobrenome que você deu é invalido ou nullo!");
             Thread.Sleep(900);
@@ -42,9 +44,9 @@ public class Metodos
         else
         {
 
-            string sobrenomeF = char.ToUpper(sobrenome[0]) + sobrenome.Substring(1).ToLower();
+            string sobrenomeF = char.ToUpper(sobrenome[0]) + sobrenome.Substring(1).ToLower(); //Transformando a primeira letra em maiuscula
 
-            string caminhoArquivo = $@"E:\Desenvolvimento\Desafio1\sobrenome.txt";
+            string caminhoArquivo = $@"C:\DasafiosJanio\Desafio1\sobrenome.txt"; //Alterar o output do arquivo 
             File.AppendAllText(caminhoArquivo, $"{sobrenomeF}" + Environment.NewLine);
         }
     }
@@ -74,6 +76,11 @@ public class Metodos
         //}
     }
     public static void GerarNomeAleatorio()
+    {
+
+    }
+
+    public static void ListarNomes() 
     {
 
     }

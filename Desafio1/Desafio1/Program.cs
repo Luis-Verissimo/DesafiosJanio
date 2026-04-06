@@ -32,16 +32,56 @@ class Program
         Console.WriteLine("2) - Inserir sobrenome");
         Console.WriteLine("3) - Deletar Nome/Sobrenome");
         Console.WriteLine("4) - Gerar nome completo aleatório");
-        Console.WriteLine("5) - Sair\n");
-        int op = int.Parse(Console.ReadLine());
+        Console.WriteLine("5) - Listar nomes");
+        Console.WriteLine("6) - Sair\n");
+        string op = Console.ReadLine();
         
-        switch (op)
+        switch (op) //Tratamento da escolha feita no menu
         {
-           case 1: Console.Clear(); Metodos.InserirNome(); break;
-           case 2: Console.Clear(); Metodos.InserirSobrenome(); break;
-           case 3: Console.Clear(); Metodos.DeletarNomeSobrenome(); break;
-           case 4: Console.Clear(); Metodos.GerarNomeAleatorio();  break;
-           case 5: return; break;
+            case "1": 
+                { 
+                    Console.Clear();
+                    Metodos.InserirNome(); 
+                    break;
+                }
+            case "2":
+                {
+                    Console.Clear();
+                    Metodos.InserirSobrenome();
+                    break;
+                }
+            case "3":
+                {
+                    Console.Clear();
+                    Metodos.DeletarNomeSobrenome();
+                    break;
+                }
+            case "4": 
+                { 
+                    Console.Clear(); 
+                    Metodos.GerarNomeAleatorio(); 
+                    break; 
+                }
+            case "5": 
+                { 
+                    Console.Clear(); 
+                    Metodos.ListarNomes(); 
+                    break; 
+                }
+            case "6":
+                {
+                    return;
+                    break;
+                }
+            default:
+                {
+                    Console.Clear();
+                    Console.WriteLine("Opção INVALIDA!!!");
+                    Thread.Sleep(3000);
+                    Console.Clear();
+                    Menu();
+                    break;
+                }
         }
         
     }
